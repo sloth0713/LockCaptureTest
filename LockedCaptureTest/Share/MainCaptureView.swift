@@ -25,6 +25,13 @@ struct MainCaptureView: View {
             if self.captureView.sessionSyncer.camearCaptureType == .Extension {
                 Text("You have denied Photo Library or Camera permission, please grant them in the system's settings.")
                 //快速移动文件位置
+                
+                Button(action: {
+                    
+                }) {
+                    Text("open main app")
+                }
+                
             }
             
         }

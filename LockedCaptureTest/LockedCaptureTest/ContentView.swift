@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  LockedCameraCaptureExtensionDemo
+//  LockedCameraCaptureTest
 //
 //  Created by Photon Juniper on 2024/8/20.
 //
