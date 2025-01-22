@@ -13,14 +13,21 @@ struct ContentView: View {
     
     @State var imageValues: [UIImage] = []
     
+    var mainCaptureView:MainCaptureView =  MainCaptureView(sessionSyncer: SessionSyncer(camearCaptureType:.App))
+    
     var body: some View {
         VStack {
-            MainCaptureView(sessionSyncer: SessionSyncer(camearCaptureType:.App))
+            self.mainCaptureView
         }
         .onAppear {
             Task {
                 let _ = await AVCaptureDevice.requestAccess(for: .video)
             }
+        }
+        .onContinueUserActivity(NSUserActivityTypeLockedCameraCapture) { NSUserActivity in
+            print("open by NSUserActivityTypeLockedCameraCapture")
+            self.mainCaptureView.refreshFromAppContext()
+            
         }
     }
     

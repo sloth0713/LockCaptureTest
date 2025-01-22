@@ -7,6 +7,8 @@
 
 import AVFoundation
 import Photos
+import LockedCameraCapture
+import UIKit
 
 enum CamearCaptureType: String {
     case App
@@ -31,5 +33,17 @@ class SessionSyncer {
             return libraryDirectoryURL
         }
         return URL(fileURLWithPath: "sss")
+    }
+    
+    static func initAppContext() {
+        let appContext = CaptureIntent.AppContext(UIState:"UIState1")
+        Task {
+            do {
+                try await CaptureIntent.updateAppContext(appContext)
+                print("app context updated")
+            } catch {
+                print("error on updating app context \(error)")
+            }
+        }
     }
 }

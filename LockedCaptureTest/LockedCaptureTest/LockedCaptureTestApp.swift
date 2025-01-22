@@ -21,9 +21,9 @@ struct LockedCaptureTestApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // 在这里配置首次启动时的数据加载等操作
+        SessionSyncer.initAppContext()
         return true
     }
 

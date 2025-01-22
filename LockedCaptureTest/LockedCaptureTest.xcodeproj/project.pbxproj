@@ -15,6 +15,8 @@
 		2B3DFE2E2D3DF57800F3F986 /* SessionSyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DFE2C2D3DF55A00F3F986 /* SessionSyncer.swift */; };
 		2B3DFE2F2D3DF58100F3F986 /* MainCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DFE2B2D3DF55000F3F986 /* MainCaptureView.swift */; };
 		2B3DFE302D3DF58100F3F986 /* MainCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3DFE2B2D3DF55000F3F986 /* MainCaptureView.swift */; };
+		2BC219252D3E67BF00F0FC7B /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC219242D3E67A300F0FC7B /* CameraOverlayView.swift */; };
+		2BC219262D3E67BF00F0FC7B /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC219242D3E67A300F0FC7B /* CameraOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		2B3DFE2B2D3DF55000F3F986 /* MainCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCaptureView.swift; sourceTree = "<group>"; };
 		2B3DFE2C2D3DF55A00F3F986 /* SessionSyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSyncer.swift; sourceTree = "<group>"; };
 		2B5433D12D3A3D010007B620 /* LockedCaptureTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockedCaptureTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC219242D3E67A300F0FC7B /* CameraOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -175,6 +178,7 @@
 		2B3DFE2A2D3DF54200F3F986 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				2BC219242D3E67A300F0FC7B /* CameraOverlayView.swift */,
 				2B3DFE2C2D3DF55A00F3F986 /* SessionSyncer.swift */,
 				2B3DFE2B2D3DF55000F3F986 /* MainCaptureView.swift */,
 			);
@@ -347,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC219252D3E67BF00F0FC7B /* CameraOverlayView.swift in Sources */,
 				2B3DFE302D3DF58100F3F986 /* MainCaptureView.swift in Sources */,
 				2B3DFE2E2D3DF57800F3F986 /* SessionSyncer.swift in Sources */,
 			);
@@ -364,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3DFE2F2D3DF58100F3F986 /* MainCaptureView.swift in Sources */,
+				2BC219262D3E67BF00F0FC7B /* CameraOverlayView.swift in Sources */,
 				2B3DFE2D2D3DF57800F3F986 /* SessionSyncer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

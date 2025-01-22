@@ -18,6 +18,10 @@ struct MainCaptureView: View {
         self.captureView = CaptureView(sessionSyncer: sessionSyncer)
     }
     
+    func refreshFromAppContext() {
+        self.captureView.refreshFromAppContext()
+    }
+    
     var body: some View {
         VStack {
             self.captureView
@@ -41,22 +45,30 @@ struct MainCaptureView: View {
 struct CaptureView: UIViewControllerRepresentable {
     private let delegate: ImagePickerDelegate
     let sessionSyncer:SessionSyncer
+    let imagePicker:UIImagePickerController
     
     init(sessionSyncer:SessionSyncer) {
         self.sessionSyncer = sessionSyncer
         self.delegate = ImagePickerDelegate(sessionSyncer: sessionSyncer)
+        self.imagePicker = UIImagePickerController()
+    }
+    
+    func refreshFromAppContext() {
+        self.imagePicker.cameraOverlayView?.setNeedsLayout()
     }
     
     func makeUIViewController(context: Self.Context) -> UIImagePickerController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.mediaTypes = [UTType.image.identifier, UTType.movie.identifier]
-        imagePicker.cameraDevice = .rear
-        imagePicker.delegate = self.delegate
+        let customView: CameraOverlayView = CameraOverlayView(frame: CGRect(x: 50, y: 100, width: 200, height: 100))
+
+        customView.backgroundColor = .clear
+        self.imagePicker.sourceType = .camera
+        self.imagePicker.mediaTypes = [UTType.image.identifier, UTType.movie.identifier]
+        self.imagePicker.cameraDevice = .rear
+        self.imagePicker.delegate = self.delegate
+        self.imagePicker.cameraOverlayView = customView
+        self.imagePicker.videoQuality = .typeHigh
         
-        imagePicker.videoQuality = .typeHigh
-        
-        return imagePicker
+        return self.imagePicker
     }
     
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Self.Context) {

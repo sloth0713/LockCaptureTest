@@ -19,8 +19,6 @@ struct CaptureExtension: LockedCameraCaptureExtension {
                 
 //                Text("You have denied Photo Library or Camera permission, please grant them in the system's settings.")
                 
-                //快速移动文件位置
-                
                 Button(action:{
                         Task {
                             do {
