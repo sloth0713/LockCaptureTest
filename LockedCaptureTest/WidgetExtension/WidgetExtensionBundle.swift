@@ -26,7 +26,7 @@ struct WidgetLauncher {
         print("random \(random)")
         
         var enableWidget:Bool = random > 0.5
-        enableWidget = true
+        enableWidget = false
         if (enableWidget){
             print ("enableWidget")
             return true

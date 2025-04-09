@@ -11,6 +11,8 @@ import LockedCameraCapture
 @main
 struct LockedCaptureTestApp: App {
     
+    
+    //Users/bytedance/Library/Developer/Xcode/DerivedData/LockedCaptureTest-dsitocthenvigeafqwsctbuyvbcm/Build/Products/Debug-iphoneos
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
